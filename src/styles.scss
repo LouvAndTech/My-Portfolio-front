@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+	font-size: 9px;
+    font-family:'cinzel',sans-serif;
+	scroll-behavior: smooth;
+}
+
+body{
+	margin:0;
+	padding:0;
+	background:#272626;
+	color:#fff;
+	overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section{
+	scroll-snap-align: start;
+}
