@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
     </p>
   `,
   styles: [
-    
+
   ]
 })
 export class IntroTextComponent{
 
   text = "";
-  txt_to_print = 'I\'m a first year student in electronic and computing engenering';
+  txt_to_print = 'I\'m a second year student in electronic and computing engenering';
   it = 0;
   constructor() { 
     let int = setInterval(() => {
