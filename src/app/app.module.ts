@@ -11,6 +11,8 @@ import { StudiesExperiencesMainComponent } from './studies-experiences/studies-e
 import { SkillsMainComponent } from './skills/skills-main/skills-main.component';
 import { AboutMeMainComponent } from './about-me/about-me-main/about-me-main.component';
 import { ScrollTopComponent } from './other/scroll-top/scroll-top.component';
+import { StudiesListComponent } from './studies-experiences/studies-list/studies-list.component';
+import { ExpriencesListComponent } from './studies-experiences/expriences-list/expriences-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ScrollTopComponent } from './other/scroll-top/scroll-top.component';
     StudiesExperiencesMainComponent,
     SkillsMainComponent,
     AboutMeMainComponent,
-    ScrollTopComponent
+    ScrollTopComponent,
+    StudiesListComponent,
+    ExpriencesListComponent
   ],
   imports: [
     BrowserModule,
