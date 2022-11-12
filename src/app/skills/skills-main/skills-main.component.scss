@@ -20,7 +20,7 @@ section{
   
         .txt{
           border-color: #50685f;
-          width: 75%;
+          background-color: #50685f;
         }
       }
   
@@ -29,19 +29,30 @@ section{
   
         .txt{
           border-color: #97afa7;
+          background-color: #97afa7;
         }
       }
       
       .txt{
-        width: 75%;
+        width: 50%;
         font-size: 1.5rem;
         font-weight: 600;
         margin-bottom: 1rem;
         border: 3px;
         padding: 3%;
         border-style: solid;
-        border-color: #586074;
         border-radius: 30px;
+      }
+
+      .arrow{
+        text-align: center;
+        width: 25%;
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 30em;
+        line-height: -55px;
+        color: rgb(143, 76, 76);
       }
   
       .graph{

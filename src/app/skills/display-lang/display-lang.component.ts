@@ -10,8 +10,8 @@ export class DisplayLangComponent implements OnChanges {
   @Input() lst_lang!: any;
 
   name : string = "";
-  usage : string = "";
   mastering : string = "";
+  usage : string [] = [];
 
   ngOnChanges() {
     this.lang_hover = this.displayLang(this.lang_hover);
@@ -21,7 +21,15 @@ export class DisplayLangComponent implements OnChanges {
     for (let i = 0; i < this.lst_lang.length; i++) {
       if(this.lst_lang[i].name == lang){
         this.name = this.lst_lang[i].name;
-        this.usage = this.lst_lang[i].usages;
+        this.usage = [];
+        try{
+          for (let usage of this.lst_lang[i].usages) {
+            this.usage.push(`${usage}`);
+            //console.log(this.usage);
+          } 
+        }catch(e){
+          //console.log(e);
+        }
         this.mastering = this.lst_lang[i].level;
         break;
       }

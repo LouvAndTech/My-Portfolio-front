@@ -1,5 +1,7 @@
 <div>
     <h2>{{name}}</h2>
-    <h5>{{mastering}}</h5>
-    <p>{{usage}}</p>
+    <h5><span>Mastering</span>:  {{mastering}}</h5>
+    <ul *ngIf="usage.length">
+        <li *ngFor="let us of usage ">{{us}}</li>
+    </ul>
 </div>

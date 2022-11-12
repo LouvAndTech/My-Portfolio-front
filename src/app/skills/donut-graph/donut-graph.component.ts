@@ -9,7 +9,8 @@ const client = new PocketBase('https://pocket.elouan-lerissel.fr');
     <div class="donut-container">
       <svg width="400" height="400" viewBox="-200 -200 400 400" preserveAspectRatio="xMidYMid">
         <g class="arcGroup">
-          <path (mouseenter) ="mouseEnter(lst_lang[i].name)" class="arc" *ngFor="let path of listPath; let i = index" [attr.d]="path.d" [attr.transform]="path.rotate" [attr.fill]="lst_lang[i].color"></path>
+          <path (mouseenter) ="mouseEnter(lst_lang[i].name)" class="arc" *ngFor="let path of listPath; let i = index" [attr.d]="path.d" [attr.transform]="path.rotate" [attr.fill]="lst_lang[i].color">
+          </path>
         </g>
       </svg>
     </div>
@@ -38,7 +39,7 @@ function buildDonnut(lst_lang : any) : {d : string, rotate : string}[]{
     svgPaths.push({d : buidAPart(StartAngle, angles, 199, 130), rotate : 'rotate('+0+')'});
     StartAngle += angles;
   }
-  console.log(svgPaths);
+ //console.log(svgPaths);
   return svgPaths ;
 }
 
