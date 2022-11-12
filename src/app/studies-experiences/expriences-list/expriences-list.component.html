@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <div class="sp-box-wrapper">
-    <div class="sp-box" *ngFor="let st of lst_st">
+    <a class="button up" (click)="previous()"></a>
+    <div class="sp-box" *ngFor="let st of lst_st_active">
         <div class="sp-box-header">
             <span>{{st.date}}</span>
         </div>
@@ -9,4 +11,5 @@
             <div class="sp-box-txt">{{st.field}}</div>
         </div>
     </div>
+    <a class="button down" (click)="next()"></a>
 </div>
