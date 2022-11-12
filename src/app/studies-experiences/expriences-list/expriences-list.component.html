@@ -1,1 +1,12 @@
-<p>expriences-list works!</p>
+<div class="sp-box-wrapper">
+    <div class="sp-box" *ngFor="let st of lst_st">
+        <div class="sp-box-header">
+            <span>{{st.date}}</span>
+        </div>
+        <div class="sp-box-content">
+            <div class="sp-box-title">{{st.name}}</div>
+            <div class="sp-box-subtitle">{{st.poste}}</div>
+            <div class="sp-box-txt">{{st.field}}</div>
+        </div>
+    </div>
+</div>

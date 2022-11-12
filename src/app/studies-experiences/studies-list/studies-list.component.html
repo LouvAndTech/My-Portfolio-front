@@ -1,1 +1,12 @@
-<p>studies-list works!</p>
+<div class="sp-studies">
+    <div class="sp-{{i}} sp-studies-content" *ngFor="let st of lst_st; let i = index">
+        <div class="sp-box-header">
+            <span>{{st.date}}</span>
+        </div>
+        <div class="sp-box-content">
+            <div class="sp-box-title">{{st.name}}</div>
+            <div class="sp-box-subtitle">{{st.place}}</div>
+            <div class="sp-box-txt">{{st.title}}</div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,13 @@
 section{
     background-color: #757f97;
 }
+.sp-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+
+    .module{
+        width: 50%;
+        margin: 0 10px 0 10px;
+    }
+}

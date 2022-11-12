@@ -13,6 +13,10 @@ import { AboutMeMainComponent } from './about-me/about-me-main/about-me-main.com
 import { ScrollTopComponent } from './other/scroll-top/scroll-top.component';
 import { StudiesListComponent } from './studies-experiences/studies-list/studies-list.component';
 import { ExpriencesListComponent } from './studies-experiences/expriences-list/expriences-list.component';
+import { NavbarComponent } from './intro/navbar/navbar.component';
+import { SectionButtonComponent } from './intro/navbar/section-button/section-button.component';
+import { DonutGraphComponent } from './donut-graph/donut-graph.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { ExpriencesListComponent } from './studies-experiences/expriences-list/e
     AboutMeMainComponent,
     ScrollTopComponent,
     StudiesListComponent,
-    ExpriencesListComponent
+    ExpriencesListComponent,
+    NavbarComponent,
+    SectionButtonComponent,
+    DonutGraphComponent
   ],
   imports: [
     BrowserModule,
