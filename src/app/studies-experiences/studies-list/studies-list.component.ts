@@ -32,7 +32,7 @@ export class StudiesListComponent implements OnInit {
         }
         st.date = st.start + " - "+ st.end;
     });
-    await console.log(this.lst_st);
+    //await console.log(this.lst_st);
   }
 
 

@@ -15,7 +15,8 @@ import { StudiesListComponent } from './studies-experiences/studies-list/studies
 import { ExpriencesListComponent } from './studies-experiences/expriences-list/expriences-list.component';
 import { NavbarComponent } from './intro/navbar/navbar.component';
 import { SectionButtonComponent } from './intro/navbar/section-button/section-button.component';
-import { DonutGraphComponent } from './donut-graph/donut-graph.component';
+import { DonutGraphComponent } from './skills/donut-graph/donut-graph.component';
+import { DisplayLangComponent } from './skills/display-lang/display-lang.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { DonutGraphComponent } from './donut-graph/donut-graph.component';
     ExpriencesListComponent,
     NavbarComponent,
     SectionButtonComponent,
-    DonutGraphComponent
+    DonutGraphComponent,
+    DisplayLangComponent
   ],
   imports: [
     BrowserModule,

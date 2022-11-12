@@ -1,0 +1,23 @@
+.donut-container {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    svg {
+        height: auto;
+        width: auto;
+        filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+    }
+    .arcGroup{
+        path.arc {
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover{
+                //fill: #d7d7d7;
+                filter: brightness(0.8);
+            }
+        }
+    }
+}
