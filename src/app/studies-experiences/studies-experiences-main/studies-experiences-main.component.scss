@@ -4,6 +4,7 @@ section{
 .sp-wrapper{
     display: flex;
     flex-direction: row;
+    -ms-flex-align : start;
     height: 100%;
 
     .module{
