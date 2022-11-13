@@ -10,57 +10,69 @@ section{
     margin-top: 0vh;
       
   
-    .in{
-      display: flex;
-      flex-direction: row;
-      gap : 1.5rem;
-  
-      &.info{
-        height: 50%;
-  
-        .txt{
-          border-color: #50685f;
-          background-color: #50685f;
-        }
-      }
-  
-      &.elec{
-        height:50%;
-  
-        .txt{
-          border-color: #97afa7;
-          background-color: #97afa7;
-        }
-      }
-      
-      .txt{
-        width: 50%;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        border: 3px;
-        padding: 3%;
-        border-style: solid;
-        border-radius: 30px;
-      }
+  .in{
+    display: flex;
+    flex-direction: row;
+    gap : 1.5rem;
 
-      .arrow{
-        text-align: center;
-        width: 25%;
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-        font-size: 30em;
-        line-height: -55px;
-        color: rgb(143, 76, 76);
-      }
-  
-      .graph{
-        width: 25%;
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
+    &.info{
+      height: 50%;
+
+      .txt{
+        border-color: #50685f;
+        background-color: #50685f;
       }
     }
+
+    &.elec{
+      height:50%;
+
+      .txt{
+        border-color: #97afa7;
+        background-color: #97afa7;
+      }
+    }
+    
+    .txt{
+      width: 50%;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border: 3px;
+      padding: 3%;
+      border-style: solid;
+      border-radius: 30px;
+    }
+
+    .arrow{
+      text-align: center;
+      width: 25%;
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 30em;
+      line-height: -55px;
+      color: rgb(143, 76, 76);
+
+      .text{
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        border: 0px;
+        border-bottom: 1px;
+        padding: 3%;
+        border-style: solid;
+      }
+    }
+
+    .graph{
+      width: 25%;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
   }
-  
+}
+

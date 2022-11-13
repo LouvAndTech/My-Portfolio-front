@@ -36,7 +36,7 @@ function buildDonnut(lst_lang : any) : {d : string, rotate : string}[]{
   var StartAngle = 0;
   var svgPaths: {d : string, rotate : string}[] = [];
   for (let i = 0; i < lst_lang.length; i++) {
-    svgPaths.push({d : buidAPart(StartAngle, angles, 199, 130), rotate : 'rotate('+0+')'});
+    svgPaths.push({d : buidAPart(StartAngle, angles, 199, 110), rotate : 'rotate('+0+')'});
     StartAngle += angles;
   }
  //console.log(svgPaths);
@@ -46,9 +46,11 @@ function buildDonnut(lst_lang : any) : {d : string, rotate : string}[]{
 function buidAPart(aStart : number, atotal : number , R : number, r : number) : string {
   var aEnd = (aStart + atotal)-1;
   aStart = aStart + 1;
+  //Correction for the section diffrence between the part 
+  let corection = 0.3; 
   //compute all the points
-  const Pt1 = {x: R * Math.cos(degRad(aStart)), y: R * Math.sin(degRad(aStart))};
-  const Pt2 = {x: R * Math.cos(degRad(aEnd)), y: R * Math.sin(degRad(aEnd))};
+  const Pt1 = {x: R * Math.cos(degRad(aStart-corection)), y: R * Math.sin(degRad(aStart-corection))};
+  const Pt2 = {x: R * Math.cos(degRad(aEnd+corection)), y: R * Math.sin(degRad(aEnd+corection))};
   const Pt3 = {x: r * Math.cos(degRad(aEnd)), y: r * Math.sin(degRad(aEnd))};
   const Pt4 = {x: r * Math.cos(degRad(aStart)), y: r * Math.sin(degRad(aStart))};
 
