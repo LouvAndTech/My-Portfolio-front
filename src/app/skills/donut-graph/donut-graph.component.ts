@@ -9,7 +9,7 @@ const client = new PocketBase('https://pocket.elouan-lerissel.fr');
     <div class="donut-container">
       <svg width="400" height="400" viewBox="-200 -200 400 400" preserveAspectRatio="xMidYMid">
         <g class="arcGroup">
-          <path (mouseenter) ="mouseEnter(lst_lang[i].name)" class="arc" *ngFor="let path of listPath; let i = index" [attr.d]="path.d" [attr.transform]="path.rotate" [attr.fill]="lst_lang[i].color">
+          <path (mouseenter) ="mouseEnter(i)" class="arc" *ngFor="let path of listPath; let i = index" [attr.d]="path.d" [attr.transform]="path.rotate" [attr.fill]="lst_lang[i].color" stroke="white" attr.stroke-width="{{active[i]?2:0}}" stroke-linecap="round">
           </path>
         </g>
       </svg>
@@ -21,12 +21,17 @@ export class DonutGraphComponent implements OnChanges {
   @Input() lst_lang!: any;
   @Output() langUpdateEvent = new EventEmitter<string>();
   listPath!: {d : string, rotate : string}[];
+  active !: boolean [];
+  
   ngOnChanges(){
+    this.active = new Array(this.lst_lang.length).fill(false);
     this.listPath = buildDonnut(this.lst_lang);
   }
 
-  mouseEnter(lang : string){
-    this.langUpdateEvent.emit(lang);
+  mouseEnter(index : number) {
+    this.active = new Array(this.lst_lang.length).fill(false);
+    this.langUpdateEvent.emit(this.lst_lang[index].name);
+    this.active[index] = true;
     //console.log("mouseOver: "+lang);
   }
 }

@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div>
       {{ text }}
-      <span class="{{(blink)?'on':'off'}}">|</span></div>
+      <span class="{{(blink)?'on':'off'}}">|</span>
+    </div>
   `,
   styles: [`
   span{
