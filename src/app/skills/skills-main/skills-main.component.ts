@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import PocketBase from 'pocketbase';
-const client = new PocketBase('https://pocket.elouan-lerissel.fr');
+import { AppComponent } from 'src/app/app.component';
+const client = new PocketBase(AppComponent.API_ENDPOINT);
 
 
 @Component({

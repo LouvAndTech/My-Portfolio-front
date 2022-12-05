@@ -14,7 +14,6 @@ export class SectionButtonComponent {
   @Input () text!: string;
 
   scrollToTarget() {
-    console
     let target = document.getElementById(this.target);
     console.log(target);
     if(target) {

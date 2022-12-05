@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import PocketBase from 'pocketbase';
-import { Action } from 'rxjs/internal/scheduler/Action';
-const client = new PocketBase('https://pocket.elouan-lerissel.fr');
+import { AppComponent } from 'src/app/app.component';
+const client = new PocketBase(AppComponent.API_ENDPOINT);
 
 @Component({
   selector: 'app-expriences-list',

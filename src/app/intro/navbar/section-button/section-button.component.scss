@@ -12,6 +12,7 @@ li{
     transition: 0.1s ease-in-out;
     box-sizing: border-box;
     transition: 0.2s ;
+    backdrop-filter: blur(5px);
 
     a{
         color:#fff;
@@ -21,6 +22,7 @@ li{
         padding: 1rem 2.05rem;
         padding-right: 1rem;
         display: block;
+        
     }
     &:hover{
         background:rgba(0, 0, 0, 0.4);
