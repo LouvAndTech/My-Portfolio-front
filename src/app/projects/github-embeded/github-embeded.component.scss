@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px; /*Default: 17px*/
+
+    --background-card : #fff;
+    --secondary-background : #8eb9e4;
+}
+
+.git-container {
+    display: flex;
+    align-items: center;
+    padding: 3.52em;    
+    align-self: center;    
+    justify-content: center;
+    align-items: center;       
+}
+
+.card{
+    display: grid;
+    width: 19.41em;
+    height: 22.35em;
+    margin: 1.17em;
+    margin-top: 2.94em;
+    margin-bottom: 2.94em;
+    background-color: var(--background-card);
+    min-width: 19.41em;
+    border-radius: 0.88em;
+    overflow: hidden;
+    max-width: 21.17em;
+    position: relative;
+    box-shadow: 0.29em 0.29em 0.58em 0.05em rgba(0,0,0,0.25);
+    transition: .5s;
+    transform: scale(1);
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 30em;
+        height: 20em;
+        background-color: var(--secondary-background);
+        margin-top: 8em;
+        transform: translateX(-3em) rotate(6deg);
+    }
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 6em;
+        height: 6em;
+        border-radius: 20em;
+        background-color: var(--background-card);
+        transform: translateY(-4.5em) translateX(-1em);
+    }
+
+    &:hover{
+        transform: scale(1.1) rotate(2deg);
+    }
+}
+
+.user_info{
+    position: relative;
+    display: flex;
+    width: 19.41em;
+    height: fit-content;
+}
+
+.info{
+    position: relative;
+    display: grid;
+    padding: 1.1em;
+    align-items: center;
+    color: #565656;
+    max-width: 13.52em;
+}
+
+.info h2{
+    font-size: 1.5em;
+}
+
+.info h3{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow: hidden;
+    transition: .5s;
+    max-width: 156px;
+}
+
+.info a{
+    text-decoration: none;
+    color: #565656;
+}
+
+.info h3:hover{
+    letter-spacing: .05em;
+}
+
+.user_img{
+    position: relative;
+    display: flex;
+    width: 5.88em;
+    height: 5.88em;
+    margin: 1.1em 1.7em 1.1em auto;
+    border-radius: 0.4em;
+    background-color: #000000;
+}
+
+.separator{
+    position: relative;
+    display: flex;
+    width: 9.70em;
+    height: 0.17em;
+    margin-left: 4.85em;
+    background-color: #c0c0c2;
+    border-radius: 1.17em;
+}
+
+.description{
+    position: relative;
+    display: block;
+    width: 19.41em;
+    height: 6.70em;
+    padding: 1.17em 1.76em 1.17em 1.76em;
+    color: #373737;
+}
+
+.description p{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tag{
+    position: relative;
+    display: flex;
+    width: 19.41em;
+    height: fit-content;
+    max-width: 20em;
+    overflow: hidden;
+    padding: 0.58em 1.76em 0.58em 1.76em;
+    min-height: 2.64em;
+
+}
+
+.tag span{
+    background-color: #828385;
+    color: #efefef;
+    margin-right: 0.58em;
+    padding: 0.17em 0.41em;
+    border-radius: 0.29em;
+}
+
+.stats{
+    position: relative;
+    display: flex;
+    width: 19.41em;
+    height: 4.7em;
+    align-items: center;
+}
+
+.gitIcon {
+    svg{
+    position: relative;
+    display: flex;
+    width: 2.94em;
+    height: 2.94em;
+    margin: 1.17em;
+    z-index: 1;
+    }
+
+    &::before{
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 50%;
+        transform: scale(1.3);
+        display: flex;
+        position: absolute;
+        translate: -1.17em;
+    }   
+}
+
+.stat svg{
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 1.17em;
+    margin: 0.58em;
+}
+
+.stat{
+    position: relative;
+    display: grid;
+    margin: 1.17em;
+    text-align: center;
+}
+
+.stat:hover span{
+    display: grid;
+}
+
+.language{
+    position: absolute;
+    display: flex;
+    height: 23.5em;
+    width: 0.58em;
+    right: 0;
+}
+
+.lang{
+    list-style-type: none;
+    width: 19.41em;
+    z-index: 1;
+}
+
+li{
+    transition: .5s;
+    position: relative;
+}
+
+.language li:hover{
+    margin-left: -0.58em;
+    border-radius: 0.58em 0em 0em 0.58em;
+}
+
+li:hover::after{
+    opacity: 1;
+    content: attr(data-before);
+    display: flex;
+    position:fixed;
+    width: fit-content;
+    height: 1.76em;
+    background-color: #c1c1c1;
+    z-index: 2;
+    text-align: center;
+    transform: translateX(2.05em);
+    border-radius: 0.29em;
+    text-align: center;
+    align-items: center;
+    padding: 0.29em 0.58em;
+}
