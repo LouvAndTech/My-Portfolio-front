@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import { NavbarComponent } from './intro/navbar/navbar.component';
 import { SectionButtonComponent } from './intro/navbar/section-button/section-button.component';
 import { DonutGraphComponent } from './skills/donut-graph/donut-graph.component';
 import { DisplayLangComponent } from './skills/display-lang/display-lang.component';
+import { GithubEmbededComponent } from './projects/github-embeded/github-embeded.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupWipComponent } from './intro/popup-wip/popup-wip.component';
 
 
 @NgModule({
@@ -35,11 +39,16 @@ import { DisplayLangComponent } from './skills/display-lang/display-lang.compone
     NavbarComponent,
     SectionButtonComponent,
     DonutGraphComponent,
-    DisplayLangComponent
+    DisplayLangComponent,
+    GithubEmbededComponent,
+    PopupWipComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
