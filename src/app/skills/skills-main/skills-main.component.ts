@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import PocketBase from 'pocketbase';
-import { AppComponent } from 'src/app/app.component';
-const client = new PocketBase(AppComponent.API_ENDPOINT);
+import { pb } from 'src/main';
 
 
 @Component({
@@ -27,7 +25,7 @@ export class SkillsMainComponent implements OnInit {
   }
 
   async getLang() {
-    const res = await client.records.getList('languages', 1, 8, {
+    const res = await pb.records.getList('languages', 1, 8, {
     })
     this.lst_lang = res.items;
     this.lang_hover = this.lst_lang[0].name;

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import PocketBase from 'pocketbase';
 
-import { AppComponent } from 'src/app/app.component';
-const client = new PocketBase(AppComponent.API_ENDPOINT);
+import { pb } from 'src/main';
 
 @Component({
   selector: 'app-github-embeded',
@@ -11,19 +9,36 @@ const client = new PocketBase(AppComponent.API_ENDPOINT);
 })
 export class GithubEmbededComponent implements OnInit {
   lst_projet : any;
+  actualPage : number = 1;
+  maxPage : number = 1;
   
 
   constructor() { }
 
   ngOnInit(): void {
-    this.getProject();
+    this.getProject(this.actualPage);
   }
 
   async getProject(start :number = 1, end :number = 3) {
-    const res = await client.records.getList('github_projects', start, end, {
+    const res = await pb.records.getList('github_projects', start, end, {
+      sort: '-created',
     })
+    this.maxPage = res.totalPages;
     this.lst_projet = res.items;
     console.log(this.lst_projet);
+  }
+
+  next(){
+    if(this.actualPage < this.maxPage){
+      this.actualPage++;
+      this.getProject(this.actualPage,3);
+    }
+  }
+  previous(){
+    if (this.actualPage > 1) {
+      this.actualPage--;
+      this.getProject(this.actualPage,3);
+    }
   }
 
 }

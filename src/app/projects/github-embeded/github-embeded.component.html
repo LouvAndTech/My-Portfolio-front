@@ -1,4 +1,6 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <div class="git-container">
+    <button class="button" (click)="previous()"></button>
     <div *ngFor="let prj of lst_projet" class="card">
         <div class="language">
             <ul class="lang">
@@ -65,4 +67,5 @@
             </div>
         </div>
     </div>
+    <button class="button" (click)="next()"></button>
 </div>

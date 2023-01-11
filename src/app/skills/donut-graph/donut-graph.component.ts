@@ -1,8 +1,6 @@
 import { Component, Input, Output, EventEmitter , OnChanges } from '@angular/core';
 
-import PocketBase from 'pocketbase';
-import { AppComponent } from 'src/app/app.component';
-const client = new PocketBase(AppComponent.API_ENDPOINT);
+import {pb} from 'src/main';
 
 @Component({
   selector: 'app-donut-graph',

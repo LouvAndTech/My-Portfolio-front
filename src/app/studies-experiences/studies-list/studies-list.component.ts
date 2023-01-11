@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import PocketBase from 'pocketbase';
-import { AppComponent } from 'src/app/app.component';
-const client = new PocketBase(AppComponent.API_ENDPOINT);
+import { pb } from 'src/main';
 
 @Component({
   selector: 'app-studies-list',
@@ -19,7 +17,7 @@ export class StudiesListComponent implements OnInit {
   }
 
   async getStudies() {
-    const res = await client.records.getList('studies', 1, 4, {
+    const res = await pb.records.getList('studies', 1, 4, {
       sort: '-start',
     })
     this.lst_st = res.items;
