@@ -5,12 +5,12 @@ import {MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BackgroundComponent } from './intro/background/background.component';
-import { IntroComponent } from './intro/intro-main/intro.component';
+import { IntroComponent } from './intro/intro.component';
 import { IntroTextComponent } from './intro/intro-text/intro-text.component';
-import { ProjectMainComponent } from './projects/project-main/project-main.component';
-import { StudiesExperiencesMainComponent } from './studies-experiences/studies-experiences-main/studies-experiences-main.component';
-import { SkillsMainComponent } from './skills/skills-main/skills-main.component';
-import { AboutMeMainComponent } from './about-me/about-me-main/about-me-main.component';
+import { ProjectComponent } from './project/project.component';
+import { StudiesExperiencesComponent } from './studies-experiences/studies-experiences.component';
+import { SkillsComponent } from './skills/skills.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 import { ScrollTopComponent } from './other/scroll-top/scroll-top.component';
 import { StudiesListComponent } from './studies-experiences/studies-list/studies-list.component';
 import { ExpriencesListComponent } from './studies-experiences/expriences-list/expriences-list.component';
@@ -18,7 +18,7 @@ import { NavbarComponent } from './intro/navbar/navbar.component';
 import { SectionButtonComponent } from './intro/navbar/section-button/section-button.component';
 import { DonutGraphComponent } from './skills/donut-graph/donut-graph.component';
 import { DisplayLangComponent } from './skills/display-lang/display-lang.component';
-import { GithubEmbededComponent } from './projects/github-embeded/github-embeded.component';
+import { GithubEmbededComponent } from './project/github-embeded/github-embeded.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupWipComponent } from './other/popup-wip/popup-wip.component';
 import { EseoInfoComponent } from './about-me/eseo-info/eseo-info.component';
@@ -30,10 +30,10 @@ import { EseoInfoComponent } from './about-me/eseo-info/eseo-info.component';
     BackgroundComponent,
     IntroComponent,
     IntroTextComponent,
-    ProjectMainComponent,
-    StudiesExperiencesMainComponent,
-    SkillsMainComponent,
-    AboutMeMainComponent,
+    ProjectComponent,
+    StudiesExperiencesComponent,
+    SkillsComponent,
+    AboutMeComponent,
     ScrollTopComponent,
     StudiesListComponent,
     ExpriencesListComponent,

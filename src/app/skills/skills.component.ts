@@ -5,10 +5,10 @@ import { pb } from 'src/main';
 
 @Component({
   selector: 'app-skills-main',
-  templateUrl: './skills-main.component.html',
-  styleUrls: ['./skills-main.component.scss']
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss']
 })
-export class SkillsMainComponent implements OnInit {
+export class SkillsComponent implements OnInit {
   lst_lang : any;
   lang_hover!: string;
   constructor() { }
