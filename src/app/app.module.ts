@@ -20,7 +20,8 @@ import { DonutGraphComponent } from './skills/donut-graph/donut-graph.component'
 import { DisplayLangComponent } from './skills/display-lang/display-lang.component';
 import { GithubEmbededComponent } from './projects/github-embeded/github-embeded.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PopupWipComponent } from './intro/popup-wip/popup-wip.component';
+import { PopupWipComponent } from './other/popup-wip/popup-wip.component';
+import { EseoInfoComponent } from './about-me/eseo-info/eseo-info.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { PopupWipComponent } from './intro/popup-wip/popup-wip.component';
     DisplayLangComponent,
     GithubEmbededComponent,
     PopupWipComponent,
+    EseoInfoComponent,
   ],
   imports: [
     BrowserModule,

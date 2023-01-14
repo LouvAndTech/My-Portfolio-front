@@ -43,7 +43,7 @@
     $animationDelay: 0.01s;
     @for $i from 1 through 15 {
         &:nth-of-type(#{$i}) {
-            animation-delay: #{0.05+($i)/30}s;
+            animation-delay: #{0.05+calc(($i) / 30)}s;
         }
     }
 

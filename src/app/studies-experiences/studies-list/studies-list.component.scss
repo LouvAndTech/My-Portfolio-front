@@ -10,9 +10,13 @@
     .sp-studies-content{
         border-radius: 30px;
         border : 3px solid #586074;
+        background-color: #586074;
+        line-height: 3rem;
         padding: 10px;
         padding-top: 15px;
         height: auto;
+        filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+
 
         &.sp-0{
             grid-column: 1/15;

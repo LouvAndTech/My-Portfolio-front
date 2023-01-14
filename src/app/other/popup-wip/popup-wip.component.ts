@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import { BackgroundComponent } from '../background/background.component';
+import { BackgroundComponent } from '../../intro/background/background.component';
 
 @Component({
   selector: 'app-popup-wip',

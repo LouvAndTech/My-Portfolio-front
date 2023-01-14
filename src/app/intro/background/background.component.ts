@@ -5,7 +5,13 @@ import { Component } from '@angular/core';
   template: `
     <img src="/assets/img/gif/{{randomBackground}}.gif">
   `,
-  styles: ['img { width: 100%; height: 100%; object-fit: cover;}']
+  styles: [`img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    }`]
 })
 export class BackgroundComponent {
 

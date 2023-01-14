@@ -14,6 +14,8 @@ section{
     display: flex;
     flex-direction: row;
     gap : 1.5rem;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+
 
     &.info{
       height: 50%;

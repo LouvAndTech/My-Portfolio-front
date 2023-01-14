@@ -1,3 +1,21 @@
 section{
     background-color: #709085;
 }
+
+.inCategory {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    app-eseo-info {
+        width: 50%;
+    }
+    
+    .contact{
+        width: 50%;
+        text-align: center;
+        
+        
+    }
+}
