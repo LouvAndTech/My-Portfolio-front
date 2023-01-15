@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="tabs">
+        <div *ngFor="let skill of skills" class="tab {{(skill.active)?'active':''}}" (click)="setActiveTab(skill)">{{skill.name}}</div>
+    </div>
+    <div class="txt">
+        <h2>{{skills[activeTab].subtitle}}</h2>
+        <p>{{skills[activeTab].field}}</p>
+        <div class="tags">
+            <div class="tag" *ngFor="let tag of skills[activeTab].tags">{{tag}}</div>
+        </div>
+    </div>
+</div>

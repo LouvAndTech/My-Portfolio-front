@@ -1,0 +1,46 @@
+.container {
+    width: 90%;
+    height: 90%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 3%;
+    border-radius: 30px;
+
+    .tabs{
+        display: flex;
+        flex-direction: row;
+        
+        .tab{
+            background-color: #4B5753;
+            padding: 1rem;
+            border-radius: 10px 10px 0% 0%;
+            white-space: nowrap;
+
+            &.active{
+                background-color: #97afa7;
+            }
+        }
+    }
+
+    .txt{
+        background-color: #97afa7;
+        width: 100%;
+        height: 80%;
+
+        border-radius: 0% 0% 10px 10px;
+
+        .tags{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 1rem;
+
+            .tag{
+                background-color: rgba($color: #000000, $alpha: 0.2);
+                padding: 0.5rem;
+                border-radius: 10px;
+                margin: 0.5rem;
+            }
+        }
+    }
+}

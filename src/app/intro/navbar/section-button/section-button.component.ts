@@ -17,7 +17,7 @@ export class SectionButtonComponent {
     let target = document.getElementById(this.target);
     console.log(target);
     if(target) {
-      target.scrollIntoView({behavior: 'smooth'});
+      target.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
   }
 }

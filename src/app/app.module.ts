@@ -22,6 +22,7 @@ import { GithubEmbededComponent } from './project/github-embeded/github-embeded.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupWipComponent } from './other/popup-wip/popup-wip.component';
 import { EseoInfoComponent } from './about-me/eseo-info/eseo-info.component';
+import { TabsComponent } from './skills/tabs/tabs.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { EseoInfoComponent } from './about-me/eseo-info/eseo-info.component';
     GithubEmbededComponent,
     PopupWipComponent,
     EseoInfoComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
