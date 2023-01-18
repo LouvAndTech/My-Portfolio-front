@@ -11,6 +11,9 @@ export class GithubEmbededComponent implements OnInit {
   lst_projet : any;
   actualPage : number = 1;
   maxPage : number = 1;
+
+  buttonLeftState : string = 'disabled' || 'active';
+  buttonRightState : string = 'active' || 'disabled';
   
 
   constructor() { }
@@ -33,11 +36,26 @@ export class GithubEmbededComponent implements OnInit {
       this.actualPage++;
       this.getProject(this.actualPage,3);
     }
+    this.buttonsCheck();
   }
   previous(){
     if (this.actualPage > 1) {
       this.actualPage--;
       this.getProject(this.actualPage,3);
+    }
+    this.buttonsCheck();
+  }
+
+  buttonsCheck(){
+    if(this.actualPage == 1){
+      this.buttonLeftState = 'disabled';
+    }else{
+      this.buttonLeftState = 'active';
+    }
+    if(this.actualPage == this.maxPage){
+      this.buttonRightState = 'disabled';
+    }else{
+      this.buttonRightState = 'active';
     }
   }
 

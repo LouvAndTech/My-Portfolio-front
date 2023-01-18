@@ -1,14 +1,28 @@
 section{
     background-color: #757f97;
 }
-.sp-wrapper{
+
+.content{
+
     display: flex;
     flex-direction: row;
-    -ms-flex-align : start;
-    height: 100%;
+    
+    .left{
+        .title{
+            max-width: 50vw;
+    
+            .catTitle{
+                margin: 0;
+                max-width: 50vw;
+            }
+        }
+
+    }
+    
 
     .module{
         width: 50%;
         margin: 0 10px 0 10px;
     }
+
 }

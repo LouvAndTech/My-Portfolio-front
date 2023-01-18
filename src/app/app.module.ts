@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatDialogModule } from '@angular/material/dialog';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BackgroundComponent } from './intro/background/background.component';
@@ -23,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupWipComponent } from './other/popup-wip/popup-wip.component';
 import { EseoInfoComponent } from './about-me/eseo-info/eseo-info.component';
 import { TabsComponent } from './skills/tabs/tabs.component';
+import { ContactMeComponent } from './about-me/contact-me/contact-me.component';
+import { ContactFormComponent } from './about-me/contact-me/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -46,12 +50,15 @@ import { TabsComponent } from './skills/tabs/tabs.component';
     PopupWipComponent,
     EseoInfoComponent,
     TabsComponent,
+    ContactMeComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    ReactiveFormsModule,
   
   ],
   providers: [],

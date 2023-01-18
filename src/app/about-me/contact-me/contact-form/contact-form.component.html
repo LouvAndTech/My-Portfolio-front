@@ -1,0 +1,14 @@
+<form [formGroup]="contact">
+
+    <div class="name">
+        <input [style.border-bottom]="(name?.invalid && name?.touched)? '2px solid red' : '2px solid green'" placeholder="Name" formControlName="name">
+        <input [style.border-bottom]="(surname?.invalid && surname?.touched)? '2px solid red' : '2px solid green'" placeholder="Surname" formControlName="surname">
+    </div>
+
+    <input class="input mail" [style.border-bottom]="(email?.invalid && email?.touched)? '2px solid red' : '2px solid green'" placeholder="Email" formControlName="email">
+    
+    <textarea class="input txt" [style.border-bottom]="(message?.invalid && message?.touched)? '2px solid red' : '2px solid green'" placeholder="Message" formControlName="message"></textarea>
+    
+    <button class="{{(contact.invalid? 'disabled':'active')}}" [disabled]="contact.invalid" (click)="onSubmit()">Submit</button>
+
+</form>

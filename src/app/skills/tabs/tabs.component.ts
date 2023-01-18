@@ -7,13 +7,7 @@ import { pb } from 'src/main';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
-  skills :{
-    active:boolean,
-    name:string,
-    subtitle:string,
-    field:string,
-    tags:string[],
-  }[] = [{active:true,name:"",subtitle:"",field:"",tags:[""]}];
+  skills :Tab[] = [{active:true,name:"",subtitle:"",field:"",tags:[""]}];
   activeTab = 0;
 
   constructor() {
@@ -49,4 +43,12 @@ export class TabsComponent implements OnInit {
   }
 
 
+}
+
+type Tab = {
+  active:boolean,
+  name:string,
+  subtitle:string,
+  field:string,
+  tags:string[],
 }

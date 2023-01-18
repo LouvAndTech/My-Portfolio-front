@@ -1,0 +1,65 @@
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    :focus{
+        outline: none;
+    }
+
+    .name{
+        display: flex;
+        gap: 10px;
+
+        input{
+            width: 100% !important;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    }
+
+    .input{
+        width: 80% ;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+        &.mail{
+            width: 70% ;
+        }
+        &.txt{
+            text-align: start;
+            width: 80% ;
+            height: 15rem;
+            resize: none;
+            overflow: scroll;
+        }
+    }
+
+    button{
+        width: 30% ;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        
+        //Size up when hover
+        transition: all .2s ease-in-out;
+        &.active{
+            transform: scale(1.05); 
+            &:hover{
+                transform: scale(1.1); 
+            }
+        }
+        &.disabled{
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+}

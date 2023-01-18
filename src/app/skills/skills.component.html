@@ -11,18 +11,16 @@
         <!-- content for this part -->
         <div class="inCategory">
             <div class="skills_content">
-                <div class="in info">
+                <div class="info">
                     <div class="txt">
                         <app-display-lang [lang_hover]="lang_hover" [lst_lang]="lst_lang"></app-display-lang>
                     </div>
-                    <div class="arrow">
-                        <div class="text">Hover on the graph to see more details</div>
-                    </div>
                     <div class="graph">
+                        <div class="text">Hover on the graph to see more details</div>
                         <app-donut-graph [lst_lang]="lst_lang" (langUpdateEvent)="changeLangHover($event)"></app-donut-graph>
                     </div>
                 </div>
-                <div class="in elec">
+                <div class="elec">
                     <app-tabs></app-tabs>
                 </div>
             </div>

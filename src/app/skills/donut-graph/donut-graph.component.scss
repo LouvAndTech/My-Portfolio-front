@@ -12,11 +12,11 @@
     .arcGroup{
         path.arc {
             cursor: pointer;
-            transition: .2s;
+            transition: .5s;
 
             &:hover{
                 //fill: #d7d7d7;
-                filter: brightness(0.85);
+                filter: brightness(0.80);
             }
         }
     }

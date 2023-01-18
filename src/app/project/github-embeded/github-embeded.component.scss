@@ -293,9 +293,19 @@
     color: #fff; 
     align-self: center;
 
+    cursor: pointer;
+
     //Size up when hover
     transition: all .2s ease-in-out;
-    &:hover{
-        transform: scale(1.4); 
+    &.active{
+        transform: scale(1.1); 
+        &:hover{
+            transform: scale(1.4); 
+        }
     }
+    &.disabled{
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+    
 }

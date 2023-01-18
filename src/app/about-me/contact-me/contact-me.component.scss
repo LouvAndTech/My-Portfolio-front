@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 2rem;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    
+    text-align: center;
+    background-color: #8f82a5;
+    border : 3px solid #8f82a5;
+    border-radius: 30px;
+    font-family: Arial ,sans-serif;
+
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+
+    margin: 2rem;
+    margin-top: 0;
+    padding: 0rem;
+
+    .txts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        background-color: #757f97;
+        padding: 2%;
+        margin-top: 5%;
+        border-radius: 30px; 
+
+        *{
+            width: fit-content;
+            border-bottom: 1px solid #fff;
+        }
+    }
+
+    .contact {
+        width: 80%;
+        background-color: #757f97;
+        padding: 2%;
+        border-radius: 30px; 
+        margin-bottom: 5%;
+        app-contact-form{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}

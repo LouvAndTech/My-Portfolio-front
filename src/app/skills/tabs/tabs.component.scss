@@ -1,10 +1,10 @@
 .container {
-    width: 90%;
-    height: 90%;
+    width: 80vw;
+    height: 100%;
     font-size: 1.8rem;
     font-weight: 600;
     padding: 3%;
-    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
 
     .tabs{
         display: flex;
@@ -16,24 +16,51 @@
             border-radius: 10px 10px 0% 0%;
             white-space: nowrap;
 
+            cursor: pointer;
+
             &.active{
                 background-color: #97afa7;
+
+                cursor: default;
             }
         }
     }
 
     .txt{
         background-color: #97afa7;
-        width: 100%;
-        height: 80%;
+        height: 20rem;
+        padding: 1rem;
 
-        border-radius: 0% 0% 10px 10px;
+        border-radius: 0% 10px 10px 10px;
+        overflow: hidden;
+
+        .subtitle{
+            margin: 1.5rem;
+            width: fit-content;
+            text-transform: uppercase;
+            letter-spacing: 0.8rem;
+            font-size: 1em;
+            font-weight: 400;;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.88);
+        }
+
+        .info{
+            font-size: 2rem;
+            font-weight: 400;
+            color: white;
+            margin: 1rem;
+        }
 
         .tags{
+            font-style: italic;
+            font-weight: 400;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             padding: 1rem;
+
+            gap : 0.5rem;
 
             .tag{
                 background-color: rgba($color: #000000, $alpha: 0.2);
