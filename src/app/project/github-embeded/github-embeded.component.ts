@@ -28,7 +28,6 @@ export class GithubEmbededComponent implements OnInit {
     })
     this.maxPage = res.totalPages;
     this.lst_projet = res.items;
-    console.log(this.lst_projet);
   }
 
   next(){

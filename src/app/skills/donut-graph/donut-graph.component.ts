@@ -17,14 +17,16 @@ import {pb} from 'src/main';
   styleUrls: ['./donut-graph.component.scss']
 })
 export class DonutGraphComponent implements OnChanges {
-  @Input() lst_lang!: any;
+  @Input() lst_lang: any = [];
   @Output() langUpdateEvent = new EventEmitter<string>();
   listPath!: {d : string, rotate : string}[];
   active !: boolean [];
   
   ngOnChanges(){
-    this.active = new Array(this.lst_lang.length).fill(false);
-    this.listPath = buildDonnut(this.lst_lang);
+    if (this.lst_lang) {
+      this.active = new Array(this.lst_lang.length).fill(false);
+      this.listPath = buildDonnut(this.lst_lang);
+    }
   }
 
   mouseEnter(index : number) {

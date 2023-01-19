@@ -2,12 +2,35 @@
 <section id="Styds&Exp">
     <div class="content">
         <!-- Title -->
-        <div class="left">
-            <div class="title">
-                <div class="catTitle big"><span>Studies & Experiences</span></div>
-            </div>
-            <app-studies-list class="module"></app-studies-list>
+        <div class="title">
+            <div class="catTitle big"><span>Studies</span></div>
         </div>
-        <app-expriences-list class="module"></app-expriences-list>
+        <!-- Studies -->
+        <!--svg that look like a git graph on the left on the screen-->
+        <div class="all" #box>
+            <div class="svgContainer">
+                <svg width="200" height="1000" xmlns="http://www.w3.org/2000/svg" #svg>
+                    <path stroke="#709085" stroke-width="15" fill="transparent" #path></path>
+                    <circle *ngFor="let node of lst_nodes" [attr.cx]="node[0]" [attr.cy]="node[1]" r="30" fill="#586074"/>
+                </svg>
+            </div>
+            <!-- List of studies -->
+            <div class="list">
+                <div class="item" *ngFor="let study of lst_st, let i = index" (click)="onClick(i)">
+                    <div class="date">{{study.date}}</div>
+                    <div class="title">{{study.title}}</div>
+                    <div class="description">{{study.description}}</div>
+                </div>
+            </div>
+            <div *ngIf="lst_st" class="text">
+                <div class="title">{{lst_st[active].name}}</div>
+                <div class="subtitle">{{lst_st[active].title}}</div>
+                <div class="subsubtitle">
+                    <div class="place">{{lst_st[active].place}}</div>
+                    <div class="date">{{lst_st[active].start}} - {{lst_st[active].end}}</div>
+                </div>
+                <div class="description">{{lst_st[active].content}}</div>
+            </div>
+        </div>
     </div>
 </section>

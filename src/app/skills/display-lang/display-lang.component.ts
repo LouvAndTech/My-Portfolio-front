@@ -18,6 +18,9 @@ export class DisplayLangComponent implements OnChanges {
   }
 
   displayLang(lang : string) : string{
+    if (!this.lst_lang) {
+      return "";
+    }
     for (let i = 0; i < this.lst_lang.length; i++) {
       if(this.lst_lang[i].name == lang){
         this.name = this.lst_lang[i].name;
