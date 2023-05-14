@@ -5,9 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:github": "ng build --configuration production --base-href https://louvandtech.github.io/My-Portfolio-front/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
-  },
+  }, 
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.12",
